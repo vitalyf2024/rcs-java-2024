@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
+        task2();
     }
 
     public static void task1(){
@@ -23,6 +23,15 @@ public class Main {
         }
     }
     public static void task2(){
-        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ievadiet ciparu:");
+
+        int input2 = sc.nextInt();
+
+        if((input2 >= 10) || (input2 <= 5)){
+            System.out.println("$$");
+        } else {
+            System.out.println("$");
+        }
     }
 }
