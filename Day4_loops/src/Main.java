@@ -17,9 +17,12 @@ public class Main {
         if(input.equals("programmesana")) {
             System.out.println("Uzvarēji!");
         } else if(input_len == 13){
-                System.out.println("vienāds simbolu skaits");
-            } else {
+            System.out.println("vienāds simbolu skaits");
+        } else {
             System.out.println("Zaudēji");
         }
-        }
     }
+    public static void task2(){
+        
+    }
+}
