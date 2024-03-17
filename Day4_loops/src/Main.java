@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        task2();
+        hw_1();
     }
 
     public static void task1(){
@@ -32,6 +32,21 @@ public class Main {
             System.out.println("$$");
         } else {
             System.out.println("$");
+        }
+    }
+
+    public static void hw_1() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ievadiet ciparu:");
+
+        int number = sc.nextInt();
+
+        if (number >= 0) {
+            for (int i = 1; i <= number; i++) {
+                System.out.println("Hello World!");
+            }
+        } else {
+            System.out.println("Ievadiet skaitli, kas ir lielāks nekā 0!");
         }
     }
 }
