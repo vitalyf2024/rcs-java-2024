@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        hw_2();
+        cw_1();
     }
 
     public static void task1(){
@@ -60,5 +60,18 @@ public class Main {
             sum = sum + numb;
         }
         System.out.println("Jūsu skaitļu summa ir " + sum);
+    }
+
+    public static void cw_1() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ievadiet skaitli:");
+
+        int number = sc.nextInt();
+        int fact = 1;
+
+        for (int i = 1; i <= number; i++) {
+            fact = fact * i;
+            }
+        System.out.println("Skaitļa "+ number + " faktoriāls ir "+ fact);
     }
 }
