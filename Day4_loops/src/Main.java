@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        cw_1();
+        cw_2();
     }
 
     public static void task1(){
@@ -73,5 +73,20 @@ public class Main {
             fact = fact * i;
             }
         System.out.println("Skaitļa "+ number + " faktoriāls ir "+ fact);
+    }
+
+    public static void cw_2() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ivadiet skaitli: ");
+        int base = sc.nextInt();
+
+        System.out.println("Ievadiet kapinātāju: ");
+        int exponent = sc.nextInt();
+        int res = 1;
+
+        for (int i = 1; i < exponent + 1; i++) {
+            res = res * base;
+        }
+        System.out.println("Kapināšanas rezultāts ir " + res);
     }
 }
