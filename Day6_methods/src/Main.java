@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        task2(0);
+        task2(4);
     }
 
     public static void task1(String a, String b, String c) {
@@ -19,7 +19,10 @@ public class Main {
                 System.out.println("Ievadiet skaitli: ");
 
                 int number = sc.nextInt();
-                sum += number;
+
+                if (number % 2 == 0) {
+                    sum += number;
+                }
             }
             System.out.println("Skaitļu summa: " + sum);
         } else {
