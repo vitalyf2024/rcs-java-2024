@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int result = task1();
+        boolean result = hw();
         System.out.println(result);
     }
 
@@ -27,4 +27,12 @@ public class Main {
         }
         return a;
     }
+
+    public static Boolean hw(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ievadiet vārdu: ");
+        String a = String.valueOf(sc.nextLine());
+
+        return a.contains("aaa");
+        }
 }
