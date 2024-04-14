@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        task2();
+        hw1();
     }
 
     public static boolean task1() {
@@ -45,5 +45,31 @@ public class Main {
         }
         double avg = sum / m.length;
         System.out.println(avg);
+    }
+
+    public static void hw1(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ievadiet masīva garumu:");
+        int n = sc.nextInt();
+        int sum = 0;
+
+        if (n >= 2){
+            int[] mass = new int[n];
+            for(int i = 0; i < mass.length; i++) {
+                System.out.println("Ievadiet skaitli:");
+                mass[i] = sc.nextInt();
+                sum += mass[i];
+            }
+            int max = mass[0];
+            for (int i = 0; i < mass.length; i++) {
+                if (mass[i] > max) {
+                    max = mass[i];
+                }
+            }
+            System.out.println("Skaitļu summa: "+sum);
+            System.out.println("Lielākais skaitlis: "+max);
+        } else {
+            System.out.println("Masīva garums nevar būt mazāks par 2!");
+            }
     }
 }
