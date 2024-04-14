@@ -1,8 +1,9 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        hw1();
+        hw2();
     }
 
     public static boolean task1() {
@@ -71,5 +72,22 @@ public class Main {
         } else {
             System.out.println("Masīva garums nevar būt mazāks par 2!");
             }
+    }
+
+    public static void hw2(){
+        Random rand = new Random();
+        int[] arr = new int[10];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rand.nextInt(100);
+        }
+
+        int max = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println("Lielākais skaitlis: "+max);
     }
 }
