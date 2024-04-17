@@ -71,7 +71,7 @@ public class Main {
             System.out.println("Lielākais skaitlis: "+max);
         } else {
             System.out.println("Masīva garums nevar būt mazāks par 2!");
-            }
+        }
     }
 
     public static void hw2(){
