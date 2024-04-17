@@ -23,9 +23,11 @@ public class Main {
 
         for (int i = 0; i < a.length; i++) {
             intList.add(a[i]);
+            //System.out.println(intList.get(i));
+            }
+        for (int i = intList.size() - 1; i >= 0; i--) {
             System.out.println(intList.get(i));
-        }
-
+            }
     }
 
     public static void task1(int[] a) {
