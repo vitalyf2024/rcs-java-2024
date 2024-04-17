@@ -1,9 +1,31 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        int[] a = {1, 11, 111, 1111};
-        task2(a);
+        int[] a = {1, 4, 7, 2, 9, 4, 6};
+        task3(a);
+    }
+
+    public static void sample() {
+        List<String> strList = new ArrayList<String>();
+        System.out.println(strList.size());
+
+        strList.add("aaaa");
+        strList.add("bbbb");
+        strList.add("cccc");
+        strList.add("dddd");
+    }
+
+    public static void task3(int[] a){
+        List<Integer> intList = new ArrayList<Integer>();
+
+        for (int i = 0; i < a.length; i++) {
+            intList.add(a[i]);
+            System.out.println(intList.get(i));
+        }
+
     }
 
     public static void task1(int[] a) {
