@@ -4,8 +4,15 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        double result = task2();
-        System.out.println(result);
+        List<Double> numbers = task2();
+        Double sum = 0.0;
+        for (int i = 0; i < numbers.size(); i++) {
+            sum += numbers.get(i);
+        }
+
+        Double avg = sum/numbers.size();
+
+        System.out.println(avg);
     }
 
     public static void task1(){
@@ -29,7 +36,7 @@ public class Main {
             System.out.println(students.get(i));
         }
     }
-    public static double task2(){
+    public static List<Double> task2(){
         List<Double> numbers = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         System.out.println("Ievadiet skaitļus (ievadiet 0, lai beigt): ");
@@ -43,13 +50,7 @@ public class Main {
         int index = numbers.size() - 1;
         numbers.remove(index);
 
-        for (int i = 0; i < numbers.size(); i++) {
-            sum += numbers.get(i);
-        }
-
-        Double avg = sum/numbers.size();
-
-        return avg;
+        return numbers;
         //System.out.println(sum + " / " + numbers.size() + " = " + avg);
     }
 }
