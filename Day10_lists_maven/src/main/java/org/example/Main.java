@@ -1,18 +1,11 @@
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        List<Double> numbers = task2();
-        Double sum = 0.0;
-        for (int i = 0; i < numbers.size(); i++) {
-            sum += numbers.get(i);
-        }
-
-        Double avg = sum/numbers.size();
-
-        System.out.println(avg);
+        hwday9();
     }
 
     public static void task1(){
@@ -52,5 +45,30 @@ public class Main {
 
         return numbers;
         //System.out.println(sum + " / " + numbers.size() + " = " + avg);
+    }
+    public static void hwday9() {
+        List<Integer> rdmnum = new ArrayList<>();
+        Random random = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            rdmnum.add(random.nextInt(10));
+            System.out.println(rdmnum.get(i));
+        }
+
+        int topsum = rdmnum.get(0) + rdmnum.get(1);
+        int sum2 = 0;
+        int pair1 = rdmnum.get(0);
+        int pair2 = rdmnum.get(1);
+
+        for (int i = 1; i < 9; i++) {
+            sum2 = rdmnum.get(i) + rdmnum.get(i + 1);
+            if (topsum < sum2) {
+                topsum = sum2;
+                pair1 = rdmnum.get(i);
+                pair2 = rdmnum.get(i + 1);
+            }
+        }
+        System.out.println();
+        System.out.println(pair1 + ", " + pair2 + " = "+topsum);
     }
 }
