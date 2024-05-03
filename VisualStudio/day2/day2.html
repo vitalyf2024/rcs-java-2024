@@ -7,18 +7,32 @@
     </head>
     <body>
 
-        
-            <button class="btn1" onClick="task1()">Click me</button>
-        
-
-        <script>
+        <div class="buttons">
+            <input type="text" id="testInput">
+            <button id="btn1" class="btn1" onClick="task2()">Pārbaudīt vārdu</button>
+        </div>
+            
+            <script>
             function task1(){
                 let sum = 0;
 
                 for (let i = 1; i < 11; i++){
                     sum = sum + i;
                 }
-                    console.log(sum)
+                document.getElementById("btn1").style.backgroundColor = "green";
+                let userInput = document.getElementById("testInput").value;
+                
+                alert(userInput);
+            }
+            function task2(){
+                let userInput = document.getElementById("testInput").value;
+                if (userInput == "programmēšana") {
+                    document.getElementById("btn1").style.backgroundColor = "green";
+                    alert("Pareizi!")                   
+                } else {
+                    document.getElementById("btn1").style.backgroundColor = "red";
+                    alert("Mēģini vēlreiz!")
+                }    
             }
         </script>
     </body>
