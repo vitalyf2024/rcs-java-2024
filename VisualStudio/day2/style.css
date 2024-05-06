@@ -2,9 +2,13 @@
     background-color: grey;
     border: none;
     color: black;
-    padding: 120px 120px;
+    padding: 20px 120px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 24px;
   }
+
+div {
+    padding-bottom: 10px;
+}

@@ -6,34 +6,55 @@
         <title>2. nodarbība</title>
     </head>
     <body>
-
-        <div class="buttons">
+        <div class="Īnputs">
             <input type="text" id="testInput">
+        </div>
+        <div class="buttons">
             <button id="btn1" class="btn1" onClick="task2()">Pārbaudīt vārdu</button>
         </div>
             
-            <script>
-            function task1(){
-                let sum = 0;
+        <script>
+            let count = 0;    
 
-                for (let i = 1; i < 11; i++){
-                    sum = sum + i;
-                }
+        function task1(){
+            let sum = 0;
+
+            for (let i = 1; i < 11; i++){
+                sum = sum + i;
+            }
+
+            document.getElementById("btn1").style.backgroundColor = "green";
+            alert(userInput);
+        }
+
+        function task2(){
+            
+            let userInput = document.getElementById("testInput").value;
+            let button = document.getElementById("btn1");
+
+            count += 1;
+            
+            if (count > 2 && userInput != "programmesana" && userInput != "") {
+                alert("Spēlē beidzās! Refresh lapu, lai sāktu no jauna");
+                return;
+            }
+
+            if (count > 3) {
+                alert("Spēlē beidzās! Refresh lapu, lai sāktu no jauna");
+                return;
+            }
+             
+            if (userInput == "programmesana") {
                 document.getElementById("btn1").style.backgroundColor = "green";
-                let userInput = document.getElementById("testInput").value;
-                
-                alert(userInput);
+                alert("Pareizi! Refresh lapu, lai sāktu no jauna");                  
+            } else if (userInput == "") {
+                alert("Tukši! Ievadi vārdu laukumā!");
+                count = count - 1;
+            } else {
+                document.getElementById("btn1").style.backgroundColor = "red";
+                alert("Mēģini vēlreiz! Mēģinājums "+count+" no 3.");
             }
-            function task2(){
-                let userInput = document.getElementById("testInput").value;
-                if (userInput == "programmēšana") {
-                    document.getElementById("btn1").style.backgroundColor = "green";
-                    alert("Pareizi!")                   
-                } else {
-                    document.getElementById("btn1").style.backgroundColor = "red";
-                    alert("Mēģini vēlreiz!")
-                }    
-            }
+        }    
         </script>
     </body>
 </html>
