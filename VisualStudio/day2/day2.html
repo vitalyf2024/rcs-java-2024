@@ -10,7 +10,7 @@
             <input type="text" id="testInput">
         </div>
         <div class="buttons">
-            <button id="btn1" class="btn1" onClick="task2()">Pārbaudīt vārdu</button>
+            <button id="btn1" class="btn1" onClick="hw()">Pārbaudīt vārdu</button>
         </div>
             
         <script>
@@ -55,6 +55,14 @@
                 alert("Mēģini vēlreiz! Mēģinājums "+count+" no 3.");
             }
         }    
+        function hw(){
+            let userInput = document.getElementById("testInput").value;
+            const letters = userInput.split("");
+
+            for (let i = 0; i < letters.length; i++){
+                alert(letters.at(i));
+            }
+        }
         </script>
     </body>
 </html>
