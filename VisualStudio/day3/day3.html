@@ -1,0 +1,34 @@
+<!DOCTYPE /html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>3. nodarbība</title>
+    </head>
+    <body>
+        <div class="Inputs">
+            <input type="text" id="testInput">
+        </div>
+        <div class="buttons">
+            <button id="btn1" class="btn1" onClick="task1()">Atrast garāko vārdu</button>
+        </div>
+            
+        <script>   
+
+        function task1(){
+            let userInput = document.getElementById("testInput").value;
+            const words = userInput.split(" ");
+            let max = 0;
+            let longword = "";
+
+            for (let i = 0; i < words.length; i++){
+                if (words.at(i).length > max) {
+                    max = words.at(i).length;
+                    longword = words.at(i);
+                }
+            }
+            alert("Garākais vards ir "+longword);
+        }
+        </script>
+    </body>
+</html>
