@@ -21,6 +21,11 @@
             let max = 0;
             let longword = "";
 
+            if (userInput == ""){
+                alert("Ievadiet teikumu!")
+                return;
+            }
+
             for (let i = 0; i < words.length; i++){
                 if (words.at(i).length > max) {
                     max = words.at(i).length;
