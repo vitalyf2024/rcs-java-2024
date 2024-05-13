@@ -10,15 +10,14 @@
             <input type="text" id="testInput">
         </div>
         <div class="buttons">
-            <button id="btn1" class="btn1" onClick="task1()">Atrast garāko vārdu</button>
+            <button id="btn1" class="btn1" onClick="task2()">Parbaudīt krasu</button>
         </div>
             
         <script>   
+        const colors = ["sarkans", "zaļš", "zils", "dzeltens", "melns", "balts"];
+
 
         function task1(){
-
-            let userInput = document.getElementById("testInput").value;
-
             if (userInput == ""){
                 alert("Ievadiet teikumu!")
                 return;
@@ -35,6 +34,16 @@
                 }
             }
             alert("Garākais vards ir "+longword);
+        }
+        function task2(){
+            let userInput = document.getElementById("testInput").value;
+            for (let i = 0; i < colors.length; i++) {
+                if (userInput == colors[i]) {
+                    alert(i);
+                    return;
+                }
+            }
+            alert("Krasa nav atrasta");
         }
         </script>
     </body>
