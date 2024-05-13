@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="style.css">*/ -->
         <title>3. nodarbība</title>
     </head>
     <body>
@@ -16,18 +16,20 @@
         <script>   
 
         function task1(){
+
             let userInput = document.getElementById("testInput").value;
-            const words = userInput.split(" ");
-            let max = 0;
-            let longword = "";
 
             if (userInput == ""){
                 alert("Ievadiet teikumu!")
                 return;
             }
 
+            const words = userInput.split(" ");
+            let max = 0;
+            let longword = "";
+
             for (let i = 0; i < words.length; i++){
-                if (words.at(i).length > max) {
+                if (isNaN(words[i]) == true && words.at(i).length > max) {
                     max = words.at(i).length;
                     longword = words.at(i);
                 }
